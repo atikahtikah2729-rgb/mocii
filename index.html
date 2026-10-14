@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carpal Care Mate – Sahabat Setia Pergelanganmu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFF7EE;
+  --surface: #FFFFFF;
+  --surface-2: #F6F0FF;
+  --ink: #372C4F;
+  --muted: #6A5F84;
+  --lav: #7B55C9;
+  --lav-deep: #5A3A9E;
+  --lav-soft: #E9DEFC;
+  --pink: #C93A73;
+  --pink-deep: #98275A;
+  --pink-soft: #FFE0EB;
+  --mint: #2B7F63;
+  --mint-deep: #1E5E49;
+  --mint-soft: #D5F3E6;
+  --line: #E6DCF3;
+  --on: #FFFFFF;
+  --hand: #FFD3C2;
+  --hand2: #FFBBA3;
+  --hand-line: #D08B76;
+  --m-body: #D7C6F8;
+  --shadow: 0 10px 28px rgba(123, 85, 201, .12);
+  --font-display: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B1626; --surface: #261F38; --surface-2: #30284A; --ink: #F1EAFF; --muted: #B6AAD2;
+    --lav: #B79BFF; --lav-deep: #7656C8; --lav-soft: #3B2F63;
+    --pink: #FF8DB5; --pink-deep: #C85584; --pink-soft: #4A2540;
+    --mint: #7FDDB8; --mint-deep: #4DB08B; --mint-soft: #1F4136;
+    --line: #3A3157; --on: #1D1233; --hand: #F2BBA6; --hand2: #E5A18A; --hand-line: #B97B67;
+    --m-body: #C3AEF5; --shadow: 0 10px 28px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1626; --surface: #261F38; --surface-2: #30284A; --ink: #F1EAFF; --muted: #B6AAD2;
+  --lav: #B79BFF; --lav-deep: #7656C8; --lav-soft: #3B2F63;
+  --pink: #FF8DB5; --pink-deep: #C85584; --pink-soft: #4A2540;
+  --mint: #7FDDB8; --mint-deep: #4DB08B; --mint-soft: #1F4136;
+  --line: #3A3157; --on: #1D1233; --hand: #F2BBA6; --hand2: #E5A18A; --hand-line: #B97B67;
+  --m-body: #C3AEF5; --shadow: 0 10px 28px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55; position: relative; overflow-x: hidden; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+[hidden] { display: none !important; }
+
+/* floating background */
+.bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.bg i { position: absolute; border-radius: 50%; opacity: .55; animation: drift 14s ease-in-out infinite; }
+.bg i:nth-child(1) { width: 260px; height: 260px; background: var(--lav-soft); top: -80px; left: -70px; }
+.bg i:nth-child(2) { width: 200px; height: 200px; background: var(--pink-soft); top: 30%; right: -70px; animation-delay: -4s; }
+.bg i:nth-child(3) { width: 240px; height: 240px; background: var(--mint-soft); bottom: -90px; left: 18%; animation-delay: -8s; }
+.bg b { position: absolute; font-size: 22px; opacity: .55; animation: drift 9s ease-in-out infinite; font-weight: 400; }
+.bg b:nth-of-type(1) { top: 14%; left: 82%; }
+.bg b:nth-of-type(2) { top: 62%; left: 6%; animation-delay: -3s; }
+.bg b:nth-of-type(3) { top: 84%; left: 74%; animation-delay: -6s; }
+@keyframes drift { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-16px) } }
+
+.wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 20px 18px 60px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; letter-spacing: -.01em; }
+
+/* buttons: puffy */
+.btn { border: 0; border-radius: 999px; padding: 12px 26px; font-family: var(--font-display); font-weight: 700; font-size: 17px; background: var(--lav); color: var(--on); box-shadow: 0 5px 0 var(--lav-deep); transition: transform .08s, box-shadow .08s; }
+.btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--lav-deep); }
+.btn.pink { background: var(--pink); box-shadow: 0 5px 0 var(--pink-deep); }
+.btn.pink:active { box-shadow: 0 1px 0 var(--pink-deep); }
+.btn.mint { background: var(--mint); box-shadow: 0 5px 0 var(--mint-deep); }
+.btn.mint:active { box-shadow: 0 1px 0 var(--mint-deep); }
+.btn.ghost { background: var(--surface); color: var(--ink); border: 2px solid var(--line); box-shadow: 0 4px 0 var(--line); }
+.btn.ghost:active { box-shadow: 0 1px 0 var(--line); }
+.btn.small { padding: 7px 16px; font-size: 15px; box-shadow: 0 3px 0 var(--lav-deep); }
+.btn.small.ghost { box-shadow: 0 3px 0 var(--line); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: 30px; padding: 24px; box-shadow: var(--shadow); }
+.card > h2 { font-size: 22px; margin-bottom: 14px; }
+
+/* mascot */
+.mascot { width: 100%; height: auto; display: block; overflow: visible; }
+.mascot .float { animation: floaty 3.6s ease-in-out infinite; }
+@keyframes floaty { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+.mascot :is(.e-open, .e-closed, .e-happy, .e-wide, .m-smile, .m-o, .m-big, .a-down, .a-up, .zzz, .sparks) { display: none; }
+.mascot:is([data-mood="idle"], [data-mood="work"]) :is(.e-open, .m-smile, .a-down) { display: inline; }
+.mascot[data-mood="paused"] :is(.e-closed, .m-o, .a-down, .zzz) { display: inline; }
+.mascot[data-mood="alarm"] :is(.e-wide, .m-o, .a-up) { display: inline; }
+.mascot[data-mood="alarm"] .float { transform-origin: 100px 182px; animation: shake .45s ease-in-out infinite; }
+@keyframes shake { 0%, 100% { transform: rotate(-3deg) } 50% { transform: rotate(3deg) } }
+.mascot[data-mood="stretch"] :is(.e-happy, .m-smile, .a-up) { display: inline; }
+.mascot[data-mood="done"] :is(.e-happy, .m-big, .a-up, .sparks) { display: inline; }
+.mascot .sparks { animation: twinkle 1.2s ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: 1 } 50% { opacity: .3 } }
+
+.buddy { display: flex; align-items: center; gap: 16px; width: 100%; }
+.buddy .mascot-box { flex: none; width: 128px; }
+.bubble { position: relative; background: var(--pink-soft); border-radius: 22px; padding: 12px 18px; font-weight: 600; font-size: 16px; flex: 1; }
+.bubble::before { content: ""; position: absolute; left: -9px; top: 50%; margin-top: -9px; border: 9px solid transparent; border-left: 0; border-right-color: var(--pink-soft); }
+
+/* welcome */
+.w-card { max-width: 640px; margin: 18px auto 0; text-align: center; }
+.w-card .buddy { flex-direction: column; text-align: center; }
+.w-card .buddy .mascot-box { width: 150px; }
+.w-card .bubble::before { left: 50%; top: -9px; margin: 0 0 0 -9px; border: 9px solid transparent; border-top: 0; border-bottom-color: var(--pink-soft); }
+.w-card h1 { font-size: clamp(34px, 8vw, 48px); margin: 14px 0 4px; color: var(--lav); }
+.w-card .sub { color: var(--muted); margin: 0 0 22px; }
+.field { text-align: left; margin-bottom: 20px; border: 0; padding: 0; min-width: 0; }
+.field > label, .field > legend { display: block; font-family: var(--font-display); font-weight: 700; font-size: 18px; margin-bottom: 8px; padding: 0; }
+.field input[type=text] { width: 100%; border: 2px solid var(--line); background: var(--surface-2); border-radius: 18px; padding: 12px 16px; font-size: 18px; }
+.persona-grid { display: grid; gap: 10px; grid-template-columns: 1fr; }
+.persona { text-align: left; border: 3px solid var(--line); background: var(--surface-2); border-radius: 20px; padding: 14px 16px; display: grid; grid-template-columns: 44px 1fr; gap: 4px 12px; }
+.persona .ic { grid-row: span 3; font-size: 32px; align-self: center; text-align: center; }
+.persona b { font-family: var(--font-display); font-size: 18px; }
+.persona span { font-size: 14px; color: var(--muted); }
+.persona em { font-style: normal; font-size: 13.5px; color: var(--pink); font-weight: 700; }
+.persona[aria-pressed="true"] { border-color: var(--lav); background: var(--lav-soft); }
+.chips { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.chip { border: 2px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 8px 22px; font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+.chip[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: var(--on); }
+.chip:disabled { opacity: .5; cursor: not-allowed; }
+.w-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+
+/* app header */
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 6px 0 18px; }
+.brand { font-size: 28px; color: var(--lav); }
+.brand small { display: block; font-family: var(--font-body); font-weight: 600; font-size: 14px; color: var(--muted); }
+.hello { font-size: clamp(26px, 6vw, 36px); margin: 0 0 14px; }
+
+.grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .grid { grid-template-columns: 1.1fr .9fr; } }
+.col { display: grid; gap: 18px; align-content: start; }
+
+/* timer */
+.timer-card { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.ring-box { position: relative; width: min(290px, 78vw); aspect-ratio: 1; }
+.ring-box svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: var(--lav-soft); stroke-width: 15; }
+.ring-prog { fill: none; stroke: var(--lav); stroke-width: 15; stroke-linecap: round; transition: stroke-dashoffset .3s linear, stroke .3s; }
+.ring-prog.warn { stroke: var(--pink); }
+.ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 30px; }
+.time { font-family: var(--font-display); font-weight: 800; font-size: clamp(54px, 15vw, 74px); line-height: 1; font-variant-numeric: tabular-nums; }
+.status { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.35; font-weight: 600; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.custom { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+.custom input { width: 66px; border: 2px solid var(--line); background: var(--surface-2); border-radius: 12px; padding: 6px; text-align: center; }
+
+/* stats */
+.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+.stat { border-radius: 20px; padding: 14px 10px; text-align: center; }
+.stat:nth-child(1) { background: var(--pink-soft); }
+.stat:nth-child(2) { background: var(--mint-soft); }
+.stat:nth-child(3) { background: var(--lav-soft); }
+.stat b { display: block; font-family: var(--font-display); font-size: 32px; line-height: 1.1; }
+.stat span { font-size: 13px; color: var(--muted); font-weight: 600; }
+.bars { display: flex; align-items: flex-end; gap: 8px; height: 120px; }
+.bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%; font-size: 12px; color: var(--muted); font-weight: 600; }
+.bar i { display: block; width: 100%; background: var(--lav); border-radius: 12px 12px 5px 5px; min-height: 5px; }
+.bar.today i { background: var(--pink); }
+.bar.empty i { background: var(--lav-soft); }
+
+/* settings */
+.switches { display: grid; gap: 12px; }
+.sw { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 15px; font-weight: 600; }
+.sw input { appearance: none; -webkit-appearance: none; width: 48px; height: 28px; border-radius: 999px; background: var(--line); position: relative; flex: none; cursor: pointer; transition: background .2s; border: 0; margin: 0; }
+.sw input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform .2s; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+.sw input:checked { background: var(--mint); }
+.sw input:checked::after { transform: translateX(20px); }
+.voice-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 2px dashed var(--line); font-weight: 600; }
+.voice-row select { border: 2px solid var(--line); background: var(--surface-2); border-radius: 12px; padding: 7px 10px; max-width: 100%; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; font-weight: 600; }
+
+/* tabs */
+.tabs-card { margin-top: 18px; }
+.tablist { display: flex; gap: 8px; margin: 0 0 20px; overflow-x: auto; padding-bottom: 6px; }
+.tab { background: var(--surface-2); border: 2px solid var(--line); border-radius: 999px; padding: 9px 20px; font-family: var(--font-display); font-weight: 700; font-size: 17px; white-space: nowrap; color: var(--muted); }
+.tab[aria-selected="true"] { background: var(--lav); border-color: var(--lav); color: var(--on); }
+.safety { background: var(--pink-soft); border-radius: 18px; padding: 12px 18px; font-size: 14.5px; margin: 0 0 18px; font-weight: 600; }
+
+/* guide cards */
+.moves { display: grid; gap: 16px; grid-template-columns: 1fr; margin-bottom: 20px; }
+@media (min-width: 700px) { .moves { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .moves { grid-template-columns: repeat(3, 1fr); } }
+.move { background: var(--surface-2); border: 2px solid var(--line); border-radius: 24px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.art-box { background: var(--mint-soft); border-radius: 18px; padding: 6px; }
+.art { width: 100%; height: auto; display: block; }
+.art text { font-family: var(--font-body); font-size: 11px; font-weight: 700; fill: var(--muted); }
+.move h3 { font-size: 18px; }
+.move .meta { display: inline-block; background: var(--lav-soft); border-radius: 999px; padding: 1px 12px; font-size: 13px; font-weight: 700; margin-left: 6px; vertical-align: middle; }
+.move p { margin: 0; font-size: 14.5px; color: var(--muted); }
+.move details { border-top: 2px dashed var(--line); padding-top: 8px; }
+.move summary { font-weight: 700; cursor: pointer; font-size: 15px; }
+.move ol { margin: 8px 0 0; padding-left: 22px; font-size: 14.5px; }
+.move ol li { margin-bottom: 4px; }
+.move .btn { align-self: flex-start; margin-top: auto; }
+
+/* report form */
+.form-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .form-grid { grid-template-columns: 1fr 1fr; } }
+.lbl { display: block; font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 8px; }
+.faces { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.faces label { cursor: pointer; }
+.faces input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.faces .f { display: flex; flex-direction: column; align-items: center; gap: 2px; border: 3px solid var(--line); background: var(--surface-2); border-radius: 18px; padding: 8px 2px; font-size: 26px; line-height: 1.1; }
+.faces .f small { font-size: 11.5px; font-weight: 700; color: var(--muted); text-align: center; }
+.faces input:checked + .f { border-color: var(--pink); background: var(--pink-soft); }
+.faces input:focus-visible + .f { outline: 3px solid var(--pink); outline-offset: 2px; }
+.inline { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.inline input[type=number], .inline input[type=date] { border: 2px solid var(--line); background: var(--surface-2); border-radius: 12px; padding: 8px 10px; }
+.inline input[type=number] { width: 90px; }
+.checks { display: grid; gap: 8px; }
+.checks label, .radios label { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; }
+.checks input, .radios input { width: 19px; height: 19px; accent-color: var(--lav); }
+.radios { display: flex; gap: 16px; flex-wrap: wrap; }
+textarea.note { width: 100%; min-height: 76px; border: 2px solid var(--line); background: var(--surface-2); border-radius: 16px; padding: 10px 14px; resize: vertical; }
+.log-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+.log-list li { display: flex; gap: 12px; align-items: flex-start; border: 2px solid var(--line); border-radius: 20px; padding: 12px 14px; background: var(--surface-2); }
+.pain-badge { flex: none; width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 20px; color: #fff; }
+.log-list .meta { font-size: 13px; color: var(--muted); font-weight: 600; }
+.log-list .body { flex: 1; font-size: 14.5px; }
+.del { background: none; border: 0; color: var(--muted); font-size: 22px; line-height: 1; padding: 4px 8px; }
+.notice { border-left: 6px solid var(--pink); background: var(--pink-soft); border-radius: 14px; padding: 12px 16px; margin-top: 16px; font-size: 14.5px; }
+.trend { margin-top: 14px; }
+.summary-box { width: 100%; min-height: 120px; margin-top: 10px; border: 2px dashed var(--line); background: var(--surface-2); border-radius: 16px; padding: 10px 14px; font-size: 13.5px; }
+
+.info-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .info-grid { grid-template-columns: 1fr 1fr; } }
+.info-box { border-radius: 22px; padding: 16px 18px; }
+.info-box:nth-child(1) { background: var(--lav-soft); }
+.info-box:nth-child(2) { background: var(--pink-soft); }
+.info-box:nth-child(3) { background: var(--mint-soft); }
+.info-box:nth-child(4) { background: var(--surface-2); border: 2px solid var(--line); }
+.info-box h3 { font-size: 18px; margin-bottom: 6px; }
+.info-box p { margin: 0; font-size: 15px; }
+.info-box ul { margin: 0; padding-left: 20px; font-size: 15px; }
+.info-box li { margin-bottom: 4px; }
+.foot { margin-top: 26px; color: var(--muted); font-size: 13px; text-align: center; font-weight: 600; }
+
+/* overlay */
+.overlay { position: fixed; inset: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); display: grid; place-items: center; padding: 20px; padding-top: calc(20px + env(safe-area-inset-top, 0px)); padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); overflow-y: auto; }
+.ov-card { background: var(--surface); border: 3px solid var(--line); border-radius: 34px; padding: 28px 24px; width: min(540px, 100%); text-align: center; box-shadow: var(--shadow); }
+.ov-card h2 { font-size: clamp(28px, 7vw, 38px); margin: 6px 0 8px; }
+.ov-card p { margin: 0 0 18px; color: var(--muted); font-weight: 600; }
+.ov-mascot { width: 150px; margin: 0 auto; }
+.step-count { font-weight: 700; color: var(--lav); font-size: 15px; }
+.step-time { font-family: var(--font-display); font-weight: 800; font-size: 62px; line-height: 1; margin: 6px 0 12px; font-variant-numeric: tabular-nums; }
+.step-bar { height: 12px; background: var(--lav-soft); border-radius: 999px; overflow: hidden; margin: 0 0 20px; }
+.step-bar i { display: block; height: 100%; width: 0; background: var(--lav); border-radius: 999px; transition: width 1s linear; }
+.ov-art { max-width: 300px; margin: 8px auto 0; }
+.toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 30px); opacity: 0; pointer-events: none; z-index: 60; background: var(--ink); color: var(--bg); border-radius: 20px; padding: 12px 20px; max-width: min(460px, calc(100vw - 32px)); font-size: 15px; font-weight: 600; transition: opacity .25s, transform .25s; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 420px) { .buddy .mascot-box { width: 96px; } .card { padding: 18px; } }
+@media (prefers-reduced-motion: reduce) {
+  .bg i, .bg b, .mascot .float, .mascot[data-mood="alarm"] .float, .mascot .sparks { animation: none; }
+  .ring-prog, .step-bar i, .sw input, .sw input::after, .toast, .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i><b>✿</b><b>✦</b><b>❀</b></div>
+
+<div class="wrap">
+
+  <!-- WELCOME / SETUP -->
+  <section id="welcome" hidden>
+    <div class="card w-card">
+      <div class="buddy">
+        <div class="mascot-box" data-mascot></div>
+        <div class="bubble">Halo! Aku Moci, sahabat pergelanganmu. Kenalan dulu yuk!</div>
+      </div>
+      <h1>Carpal Care Mate</h1>
+      <p class="sub">Sahabat setia pergelanganmu. Aku bantu ingatkan peregangan supaya tangan kamu jauh dari CTS.</p>
+
+      <div class="field">
+        <label for="inName">Siapa namamu?</label>
+        <input type="text" id="inName" maxlength="24" placeholder="Nama panggilanmu" autocomplete="given-name">
+      </div>
+
+      <fieldset class="field">
+        <legend>Pilih gaya sahabatmu</legend>
+        <div class="persona-grid" id="personaList"></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Ingatkan aku untuk peregangan setiap</legend>
+        <div class="chips" id="wChips">
+          <button class="chip" data-min="30" aria-pressed="true">30 menit</button>
+          <button class="chip" data-min="45" aria-pressed="false">45 menit</button>
+        </div>
+      </fieldset>
+
+      <div class="w-actions">
+        <button class="btn pink" id="btnGo" disabled>Mulai bersama Moci</button>
+        <button class="btn ghost" id="btnCancelSet" hidden>Batal</button>
+      </div>
+      <p class="hint" style="margin-top:14px">Menekan tombol ini juga mengaktifkan suara di browser kamu.</p>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <div id="app" hidden>
+    <header class="top">
+      <h1 class="brand">Carpal Care Mate<small>Sahabat setia pergelanganmu</small></h1>
+      <button class="btn ghost small" id="btnSettings">⚙️ Ganti nama &amp; mode</button>
+    </header>
+    <h2 class="hello" id="hello">Hai!</h2>
+
+    <div class="grid">
+      <div class="col">
+        <section class="card timer-card" aria-label="Timer kerja">
+          <div class="buddy">
+            <div class="mascot-box" data-mascot id="mainMascot"></div>
+            <div class="bubble" id="bubble" aria-live="polite"></div>
+          </div>
+
+          <div class="ring-box">
+            <svg viewBox="0 0 240 240" aria-hidden="true">
+              <circle class="ring-track" cx="120" cy="120" r="104"></circle>
+              <circle id="ring" class="ring-prog" cx="120" cy="120" r="104" stroke-dasharray="653.45" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="ring-center">
+              <div class="time" id="time" role="timer" aria-live="off">30:00</div>
+              <p class="status" id="status">Siap mulai.</p>
+            </div>
+          </div>
+
+          <div class="chips" id="presets" style="justify-content:center">
+            <button class="chip" data-min="30" aria-pressed="true">30 menit</button>
+            <button class="chip" data-min="45" aria-pressed="false">45 menit</button>
+            <label class="custom">atau <input type="number" id="customMin" min="1" max="180" placeholder="mnt" aria-label="Atur durasi sendiri dalam menit"> menit</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn" id="btnMain">▶ Mulai</button>
+            <button class="btn ghost" id="btnEnd">🏁 Selesai kerja</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="card" aria-label="Statistik">
+          <h2>🌷 Kebiasaanmu</h2>
+          <div class="stats-row">
+            <div class="stat"><b id="stStretch">0</b><span>peregangan hari ini</span></div>
+            <div class="stat"><b id="stWork">0</b><span>menit kerja hari ini</span></div>
+            <div class="stat"><b id="stStreak">0</b><span>hari berturut-turut</span></div>
+          </div>
+          <div class="lbl" style="font-size:15px">Peregangan 7 hari terakhir</div>
+          <div class="bars" id="bars"></div>
+        </section>
+
+        <section class="card" aria-label="Pengaturan suara dan pengingat">
+          <h2>🔔 Suara &amp; pengingat</h2>
+          <div class="switches">
+            <label class="sw"><span>Suara sahabat (menyebut namamu)</span><input type="checkbox" id="swVoice"></label>
+            <label class="sw"><span>Bunyi alarm</span><input type="checkbox" id="swSound"></label>
+            <label class="sw"><span>Notifikasi browser</span><input type="checkbox" id="swNotify"></label>
+            <label class="sw"><span>Timer mulai lagi otomatis setelah peregangan</span><input type="checkbox" id="swAuto"></label>
+            <label class="sw"><span>👀 Istirahat mata 20-20-20 (tiap 20 menit)</span><input type="checkbox" id="swEye"></label>
+            <label class="sw"><span>🍵 Pengingat minum (tiap 60 menit)</span><input type="checkbox" id="swWater"></label>
+          </div>
+          <div class="voice-row">
+            <label for="voiceSel">Suara perangkat</label>
+            <select id="voiceSel"><option value="">Otomatis</option></select>
+            <button class="btn small ghost" id="btnTest">Coba suara</button>
+            <p class="hint" id="voiceHint" style="flex-basis:100%"></p>
+          </div>
+          <p class="hint" id="notifyHint" style="margin-top:8px"></p>
+        </section>
+      </div>
+    </div>
+
+    <section class="card tabs-card">
+      <div class="tablist" role="tablist" aria-label="Fitur">
+        <button class="tab" role="tab" id="t-guide" aria-controls="p-guide" aria-selected="true">✋ Panduan peregangan</button>
+        <button class="tab" role="tab" id="t-report" aria-controls="p-report" aria-selected="false">📝 Laporan kasus harian</button>
+        <button class="tab" role="tab" id="t-info" aria-controls="p-info" aria-selected="false">💡 Kenali CTS</button>
+      </div>
+
+      <div class="panel" id="p-guide" role="tabpanel" aria-labelledby="t-guide">
+        <p class="safety">Lakukan pelan-pelan ya. Berhenti kalau nyeri atau kesemutan bertambah. Peregangan itu seharusnya terasa tertarik lembut, bukan sakit.</p>
+        <div class="moves" id="moveList"></div>
+        <button class="btn pink" id="btnRoutine">🌈 Putar semua gerakan (±3 menit)</button>
+      </div>
+
+      <div class="panel" id="p-report" role="tabpanel" aria-labelledby="t-report" hidden>
+        <div class="form-grid">
+          <div>
+            <div class="lbl">Tanggal</div>
+            <div class="inline" style="margin-bottom:18px"><input type="date" id="rDate" aria-label="Tanggal laporan"></div>
+
+            <div class="lbl" id="painLbl">Skala nyeri hari ini (1 = ringan, 5 = sangat berat)</div>
+            <div class="faces" role="radiogroup" aria-labelledby="painLbl" id="faces"></div>
+
+            <div class="lbl" style="margin-top:18px">Durasi mengetik hari ini</div>
+            <div class="inline">
+              <input type="number" id="rHours" min="0" max="16" step="0.5" value="4" aria-label="Durasi mengetik dalam jam"> jam
+              <button class="btn small ghost" id="btnFill">Isi dari timer</button>
+            </div>
+          </div>
+          <div>
+            <div class="lbl">Tangan yang terasa</div>
+            <div class="radios" style="margin-bottom:18px">
+              <label><input type="radio" name="side" value="Kanan" checked> Kanan</label>
+              <label><input type="radio" name="side" value="Kiri"> Kiri</label>
+              <label><input type="radio" name="side" value="Keduanya"> Keduanya</label>
+            </div>
+            <div class="lbl">Keluhan yang kamu rasakan</div>
+            <div class="checks" id="signs">
+              <label><input type="checkbox" value="Kesemutan di jari"> Kesemutan di jari</label>
+              <label><input type="checkbox" value="Mati rasa"> Mati rasa</label>
+              <label><input type="checkbox" value="Nyeri di pergelangan"> Nyeri di pergelangan</label>
+              <label><input type="checkbox" value="Nyeri/kesemutan malam hari"> Nyeri atau kesemutan di malam hari</label>
+              <label><input type="checkbox" value="Sulit menggenggam"> Sulit menggenggam atau sering menjatuhkan benda</label>
+              <label><input type="checkbox" value="Jari terasa lemah"> Jari atau jempol terasa lemah</label>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:18px">
+          <label class="lbl" for="note">Catatan tambahan (opsional)</label>
+          <textarea class="note" id="note" placeholder="Misal: kesemutan muncul setelah 3 jam ngetik tanpa istirahat, membaik setelah peregangan."></textarea>
+        </div>
+        <div class="actions" style="justify-content:flex-start;margin-top:16px">
+          <button class="btn mint" id="btnSave">💾 Simpan laporan hari ini</button>
+          <button class="btn ghost" id="btnSummary">Buat ringkasan untuk tugas</button>
+        </div>
+        <div id="symNotice"></div>
+        <div class="trend" id="trend"></div>
+        <textarea class="summary-box" id="summary" readonly hidden aria-label="Ringkasan laporan kasus"></textarea>
+        <ul class="log-list" id="symList"></ul>
+      </div>
+
+      <div class="panel" id="p-info" role="tabpanel" aria-labelledby="t-info" hidden>
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>Apa itu CTS?</h3>
+            <p>Carpal tunnel syndrome terjadi ketika saraf median yang melewati terowongan sempit di pergelangan tangan tertekan. Gerakan tangan berulang, pergelangan menekuk lama, dan postur ngetik yang kurang pas bisa jadi faktor risikonya.</p>
+          </div>
+          <div class="info-box">
+            <h3>Tanda awal yang perlu diperhatikan</h3>
+            <ul>
+              <li>Kesemutan atau mati rasa di jempol, telunjuk, jari tengah</li>
+              <li>Nyeri yang menjalar dari pergelangan ke lengan</li>
+              <li>Gejala lebih berat malam hari atau setelah lama ngetik</li>
+              <li>Genggaman melemah, benda gampang terjatuh</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>Atur posisi kerja</h3>
+            <ul>
+              <li>Pergelangan tangan lurus, tidak menekuk ke atas atau ke bawah</li>
+              <li>Siku sekitar 90°, bahu rileks</li>
+              <li>Layar sejajar mata, laptop jangan terlalu rendah</li>
+              <li>Pakai keyboard dan mouse eksternal bila memungkinkan</li>
+              <li>Jangan menumpu pergelangan pada tepi meja yang keras</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>Kebiasaan yang membantu</h3>
+            <ul>
+              <li>Istirahat dan regangkan tangan tiap 30–45 menit</li>
+              <li>Ketik dengan sentuhan ringan, jangan menghentak</li>
+              <li>Ganti-ganti tugas supaya tangan tidak statis</li>
+              <li>Hangatkan tangan kalau ruangan dingin</li>
+            </ul>
+          </div>
+        </div>
+        <p class="safety" style="margin-top:18px">Aplikasi ini hanya alat bantu pencegahan dan pencatatan, bukan alat diagnosis. Kalau gejala berlangsung lebih dari beberapa minggu, sering membangunkan tidur, atau jari mulai lemah, segera periksakan diri ke dokter atau layanan kesehatan kerja.</p>
+      </div>
+    </section>
+
+    <p class="foot">Data tersimpan hanya di browser kamu sendiri. Biarkan tab ini tetap terbuka saat bekerja ya.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="overlay" id="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+  <div class="ov-card" id="viewAlarm" hidden>
+    <div class="ov-mascot" data-mascot id="alarmMascot"></div>
+    <h2 id="ovTitle">Waktunya peregangan!</h2>
+    <p id="ovText">Waktu kerja kamu sudah cukup.</p>
+    <div class="actions">
+      <button class="btn pink" id="aStart">Mulai peregangan</button>
+      <button class="btn ghost" id="aSnooze">Tunda 5 menit</button>
+      <button class="btn ghost" id="aSkip">Lewati</button>
+    </div>
+  </div>
+
+  <div class="ov-card" id="viewRoutine" hidden>
+    <div class="step-count" id="rCount"></div>
+    <h2 id="rTitle"></h2>
+    <p id="rText"></p>
+    <div class="art-box ov-art" id="rArt"></div>
+    <div class="step-time" id="rTime">20</div>
+    <div class="step-bar"><i id="rBar"></i></div>
+    <div class="actions">
+      <button class="btn ghost" id="rNext">Gerakan berikutnya</button>
+      <button class="btn ghost" id="rStop">Hentikan</button>
+    </div>
+  </div>
+
+  <div class="ov-card" id="viewDone" hidden>
+    <div class="ov-mascot" data-mascot data-fixed="done"></div>
+    <h2 id="doneTitle">Peregangan selesai!</h2>
+    <p id="doneText"></p>
+    <div class="actions"><button class="btn mint" id="dClose">Lanjut</button></div>
+  </div>
+
+  <div class="ov-card" id="viewEnd" hidden>
+    <div class="ov-mascot" data-mascot data-fixed="done"></div>
+    <h2 id="endTitle">Kerja hari ini selesai!</h2>
+    <p id="endText"></p>
+    <div class="actions">
+      <button class="btn pink" id="eReport">Isi laporan harian</button>
+      <button class="btn ghost" id="eClose">Tutup</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var store = {
+    get: function (k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  var profile = Object.assign({ name: "", persona: "lembut", minutes: 30 }, store.get("cc_profile", {}));
+  var settings = Object.assign({ voice: true, sound: true, notify: false, auto: true, eye: true, water: false, voiceURI: "" }, store.get("cc_settings", {}));
+  var logs = store.get("cc_log", {});
+  var reports = store.get("cc_reports", []);
+
+  /* ================= MASCOT ================= */
+  function mascotSVG() {
+    var petals = [0, 72, 144, 216, 288].map(function (a) { return '<circle cx="0" cy="-9" r="7" fill="#FF9DBD" transform="rotate(' + a + ')"/>'; }).join("");
+    var star = function (x, y, s) { return '<path transform="translate(' + x + " " + y + ") scale(" + s + ')" d="M0 -10 L3 -3 L10 0 L3 3 L0 10 L-3 3 L-10 0 L-3 -3Z" fill="#FFC93C"/>'; };
+    return '<svg class="mascot" data-mood="idle" viewBox="0 0 200 200" aria-hidden="true">' +
+      '<ellipse cx="100" cy="190" rx="54" ry="7" fill="#372C4F" opacity=".12"/>' +
+      '<g class="float">' +
+      '<g class="a-down"><ellipse cx="24" cy="130" rx="13" ry="19" transform="rotate(22 24 130)" fill="var(--m-body)"/><ellipse cx="176" cy="130" rx="13" ry="19" transform="rotate(-22 176 130)" fill="var(--m-body)"/></g>' +
+      '<g class="a-up"><ellipse cx="22" cy="84" rx="13" ry="19" transform="rotate(-28 22 84)" fill="var(--m-body)"/><ellipse cx="178" cy="84" rx="13" ry="19" transform="rotate(28 178 84)" fill="var(--m-body)"/></g>' +
+      '<path d="M100 28 C152 28 178 66 178 114 C178 160 146 182 100 182 C54 182 22 160 22 114 C22 66 48 28 100 28Z" fill="var(--m-body)"/>' +
+      '<ellipse cx="68" cy="58" rx="20" ry="9" fill="#fff" opacity=".4" transform="rotate(-25 68 58)"/>' +
+      '<g transform="translate(138 36)">' + petals + '<circle r="5" fill="#FFD66B"/></g>' +
+      '<ellipse cx="56" cy="130" rx="12" ry="8" fill="#FF9DBD" opacity=".75"/><ellipse cx="144" cy="130" rx="12" ry="8" fill="#FF9DBD" opacity=".75"/>' +
+      '<g class="e-open"><circle cx="72" cy="108" r="8" fill="#3A2A55"/><circle cx="128" cy="108" r="8" fill="#3A2A55"/><circle cx="75" cy="105" r="2.6" fill="#fff"/><circle cx="131" cy="105" r="2.6" fill="#fff"/></g>' +
+      '<g class="e-wide"><circle cx="72" cy="108" r="11" fill="#3A2A55"/><circle cx="128" cy="108" r="11" fill="#3A2A55"/><circle cx="76" cy="104" r="3.6" fill="#fff"/><circle cx="132" cy="104" r="3.6" fill="#fff"/></g>' +
+      '<g class="e-closed" fill="none" stroke="#3A2A55" stroke-width="4" stroke-linecap="round"><path d="M62 108 Q72 116 82 108"/><path d="M118 108 Q128 116 138 108"/></g>' +
+      '<g class="e-happy" fill="none" stroke="#3A2A55" stroke-width="4.5" stroke-linecap="round"><path d="M62 112 Q72 98 82 112"/><path d="M118 112 Q128 98 138 112"/></g>' +
+      '<path class="m-smile" d="M88 130 Q100 142 112 130" fill="none" stroke="#3A2A55" stroke-width="4" stroke-linecap="round"/>' +
+      '<ellipse class="m-o" cx="100" cy="136" rx="7" ry="9" fill="#3A2A55"/>' +
+      '<g class="m-big"><path d="M82 126 Q100 158 118 126 Z" fill="#7A2E4A"/><ellipse cx="100" cy="143" rx="9" ry="5" fill="#FF9DBD"/></g>' +
+      '<g class="zzz" fill="var(--lav)" font-weight="800" font-family="sans-serif"><text x="148" y="58" font-size="24">z</text><text x="164" y="36" font-size="17">z</text></g>' +
+      '<g class="sparks">' + star(30, 44, .9) + star(172, 58, 1.1) + star(160, 160, .8) + star(38, 160, .7) + '</g>' +
+      '</g></svg>';
+  }
+
+  /* ================= PERSONAS ================= */
+  var PERSONAS = {
+    lembut: {
+      icon: "🌸", label: "Mode Perhatian & Lembut", blurb: "Lembut dan penuh kasih sayang saat mengingatkan istirahat.", pitch: 1.18, rate: 0.88, wave: "sine", notes: [523.25, 659.25, 783.99], gap: 0.26,
+      sample: "{n}, sayang, sudah waktunya istirahat sebentar ya.",
+      hello: "Halo {n}! Aku Moci. Aku akan menemani dan menjaga pergelanganmu dengan lembut.",
+      title: "Istirahat sebentar yuk, {n}", text: "Tanganmu sudah bekerja keras. Peregangan pelan-pelan ya.",
+      alarm: ["{n}, sayang, sudah waktunya istirahat sebentar ya. Yuk peregangan pelan-pelan.", "{n}, tanganmu sudah bekerja keras. Istirahat sebentar, aku temani peregangan ya.", "Aku khawatir pergelanganmu capek, {n}. Yuk, hanya tiga menit saja.", "{n}, tolong ya. Demi tanganmu yang sehat, peregangan dulu sebentar.", "Aku tunggu di sini, {n}. Peregangannya pelan-pelan saja, nggak usah buru-buru."],
+      start: "Semangat ya {n}, pelan-pelan saja. Aku jagain tanganmu.", snooze: "Baik {n}, lima menit lagi ya. Habis itu istirahat beneran ya.", skip: "Nggak apa-apa {n}, tapi jangan lupa istirahatkan tanganmu nanti ya.",
+      end: "Terima kasih sudah bekerja hari ini, {n}. Jangan lupa istirahatkan tanganmu ya.",
+      step: function (m, i, n) { return "Gerakan ke " + (i + 1) + ", " + m.t + ". " + m.say + " Pelan-pelan saja ya."; },
+      done: "Hebat, {n}! Tanganmu pasti lega sekarang. Selamat lanjut bekerja.",
+      eye: "{n}, matamu juga perlu istirahat. Lihat yang jauh selama dua puluh detik ya.", water: "{n}, jangan lupa minum air ya, biar badan tetap segar.",
+      bubble: { idle: "Halo {n}~ aku temani kerjamu ya.", work: "Semangat ya {n}, pelan-pelan saja. Aku jagain tanganmu.", paused: "Istirahat sebentar ya, aku tunggu kamu.", alarm: "{n}, waktunya peregangan, sayang.", stretch: "Pelan-pelan saja, jangan dipaksa ya.", done: "Hebat, {n}! Tanganmu pasti lega." }
+    },
+    gaul: {
+      icon: "🐱", label: "Mode Sahabat Asik & Gaul", blurb: "Santai, seru, ngingetinnya pakai bahasa gaul.", pitch: 1.3, rate: 1.1, wave: "triangle", notes: [784, 988, 784, 1175], gap: 0.12,
+      sample: "Woy {n}! Udah lama banget nih mantengin laptop.",
+      hello: "Yo {n}! Aku Moci. Gas kerja, nanti aku colek kalau udah waktunya gerak!",
+      title: "Woy {n}, gerak dulu!", text: "Udah lama banget mantengin laptop. Gas peregangan!",
+      alarm: ["Woy {n}! Udah lama banget nih mantengin laptop. Gas peregangan dulu, jangan sampai tangan kamu kesemutan!", "{n}, serius deh, tangan kamu udah teriak minta tolong. Peregangan dulu yuk, cuma tiga menit!", "Hellooo {n}, masih di situ? Ayo gerak, nanti jari kamu kaku kayak robot!", "{n}, jangan bandel ya. Ini demi pergelangan kamu, bro.", "Oke {n}, aku nggak bakal berhenti ngingetin sampai kamu regangin tangan. Ayo dong!"],
+      start: "Gas, {n}! Fokus kerja, nanti aku colek kalau udah waktunya.", snooze: "Oke {n}, lima menit lagi. Tapi habis itu jangan kabur ya!", skip: "Yah, dilewatin. Awas ya {n}, besok jangan gitu lagi.",
+      end: "Kelar juga! Keren, {n}. Tangan kamu istirahat dulu ya.",
+      step: function (m, i, n) { return "Gerakan " + (i + 1) + ": " + m.t + ". " + m.say + " Kamu pasti bisa!"; },
+      done: "Mantul, {n}! Tangan kamu aman. Gas lanjut kerja!",
+      eye: "{n}, mata juga butuh break nih. Lirik yang jauh dua puluh detik aja.", water: "Eh {n}, udah minum belum? Yuk, minum dulu biar nggak lemes.",
+      bubble: { idle: "Yo {n}! Gas kerja, aku nemenin.", work: "Fokus terus, {n}! Nanti aku colek kalau udah waktunya.", paused: "Lagi ngopi ya? Aku nungguin nih.", alarm: "WOY {n}! Waktunya gerakin tangan!", stretch: "Nah gitu dong, kece badai!", done: "Mantul, {n}! Tangan kamu aman." }
+    },
+    coach: {
+      icon: "⚡", label: "Mode Coach Tegas", blurb: "Bawel, disiplin, takut kamu kena CTS beneran.", pitch: 0.85, rate: 1.08, wave: "square", notes: [440, 440, 587], gap: 0.2,
+      sample: "{n}! Berhenti mengetik sekarang! Regangkan tangan kamu.",
+      hello: "{n}! Saya Moci, coach pergelangan kamu. Disiplin dimulai dari sekarang!",
+      title: "{n}! Berhenti ngetik!", text: "Regangkan tangan kamu sekarang. Ini bukan negosiasi.",
+      alarm: ["{n}! Berhenti mengetik sekarang! Regangkan tangan kamu, ini bukan negosiasi.", "{n}, saya ulangi! Kamu mau kena CTS beneran? Peregangan, sekarang juga!", "Jangan cari alasan, {n}! Tiga menit untuk pergelangan yang sehat bertahun-tahun.", "Tangan kamu itu aset, {n}! Rawat dengan disiplin. Mulai peregangan!", "Saya tidak akan berhenti sampai kamu bergerak, {n}. Bangun, regangkan tangan!"],
+      start: "{n}, jaga posisi pergelangan tetap lurus. Mulai kerja, disiplin!", snooze: "Lima menit saja, {n}. Tidak ada tawar menawar lagi.", skip: "Dilewati? {n}, saya catat ya. Jangan diulangi!",
+      end: "Sesi selesai, {n}. Catat laporan hari ini. Disiplin itu dicatat.",
+      step: function (m, i, n) { return "Gerakan " + (i + 1) + ", " + m.t + "! " + m.say + " Fokus, jangan setengah-setengah!"; },
+      done: "Bagus, {n}. Disiplin kamu menyelamatkan pergelanganmu. Lanjut kerja!",
+      eye: "{n}! Istirahatkan mata. Pandang yang jauh selama dua puluh detik, sekarang!", water: "{n}, minum air sekarang. Tubuh yang terhidrasi bekerja lebih baik.",
+      bubble: { idle: "{n}, siap? Disiplin dimulai sekarang.", work: "Pergelangan lurus, {n}! Jangan menekuk.", paused: "Jeda boleh. Jangan kelamaan.", alarm: "{n}! Berhenti ngetik! Peregangan, sekarang!", stretch: "Ikuti gerakannya, jangan setengah-setengah!", done: "Bagus, {n}. Disiplin kamu menyelamatkan pergelanganmu." }
+    }
+  };
+  function P() { return PERSONAS[profile.persona] || PERSONAS.lembut; }
+  function nm() { return profile.name || "Sahabat"; }
+  function fill(s) { return String(s).replace(/\{n\}/g, nm()); }
+
+  /* ================= MOVES + ILLUSTRATIONS ================= */
+  var MOVES = [
+    { t: "Posisi berdoa", s: 20, say: "Tempelkan kedua telapak di depan dada, lalu turunkan pelan-pelan ke arah perut.", benefit: "Meregangkan sisi dalam pergelangan, cocok setelah ngetik lama.", steps: ["Tempelkan kedua telapak tangan di depan dada, jari menunjuk ke atas.", "Turunkan tangan pelan-pelan ke arah perut, siku melebar ke samping.", "Berhenti saat terasa tarikan lembut di pergelangan, bukan nyeri.", "Tahan 15–20 detik sambil bernapas teratur."] },
+    { t: "Regangan sisi dalam pergelangan", s: 30, say: "Luruskan satu lengan dengan telapak ke atas, lalu tarik jari ke bawah dengan tangan satunya.", benefit: "Mengendurkan otot dan tendon di sisi telapak tangan.", steps: ["Luruskan satu lengan ke depan, telapak menghadap ke atas.", "Dengan tangan satunya, tarik jari-jari ke arah lantai dengan lembut.", "Tahan 15 detik, jangan sampai nyeri atau kesemutan.", "Ganti ke tangan satunya."] },
+    { t: "Regangan sisi luar pergelangan", s: 30, say: "Luruskan satu lengan dengan telapak ke bawah, lalu tekuk tangan ke bawah dan tekan pelan.", benefit: "Mengendurkan otot punggung tangan yang tegang karena ngetik.", steps: ["Luruskan satu lengan ke depan, telapak menghadap ke bawah.", "Tekuk pergelangan ke bawah, lalu tekan punggung tangan pelan dengan tangan satunya.", "Tahan 15 detik, napas tetap teratur.", "Ganti ke tangan satunya."] },
+    { t: "Luncur tendon jari", s: 30, say: "Ubah jari dari lurus, ke kait, lalu kepal penuh, dan ulangi pelan-pelan.", benefit: "Membantu tendon jari bergerak lancar di dalam terowongan pergelangan.", steps: ["Mulai dengan jari lurus dan rapat.", "Bengkokkan hanya ruas ujung jari seperti kait.", "Kepalkan jari penuh, jempol di luar.", "Buka kembali dan ulangi 5–8 kali pelan-pelan."] },
+    { t: "Putar pergelangan", s: 20, say: "Kepalkan tangan dengan longgar dan putar pergelangan membentuk lingkaran besar.", benefit: "Melemaskan sendi pergelangan yang kaku.", steps: ["Kepalkan tangan dengan longgar, lengan di depan.", "Putar pergelangan 10 detik searah jarum jam.", "Putar 10 detik berlawanan arah jarum jam.", "Gerakan halus, tanpa dipaksa."] },
+    { t: "Goyang tangan & putar bahu", s: 20, say: "Goyangkan kedua tangan seperti mengibas air, lalu putar bahu ke belakang.", benefit: "Mengalirkan darah ke tangan dan melemaskan bahu serta leher.", steps: ["Goyangkan kedua tangan seperti mengibas air selama 10 detik.", "Angkat bahu ke telinga, lalu putar ke belakang 5 kali.", "Lemaskan leher dan tarik napas dalam."] }
+  ];
+
+  function hand(o) {
+    var s = '<g transform="translate(' + o.x + " " + o.y + ") rotate(" + (o.rot || 0) + ") scale(" + (o.sc || 1) + ')" stroke="var(--hand-line)" stroke-width="1.6" fill="' + (o.fill || "var(--hand)") + '">';
+    s += '<rect x="-46" y="-11" width="50" height="22" rx="11"/>';
+    s += '<g transform="rotate(' + (o.bend || 0) + ')">';
+    s += '<rect x="-2" y="-13" width="28" height="26" rx="9"/>';
+    s += '<rect x="2" y="-23" width="17" height="10" rx="5" transform="rotate(-18 2 -13)"/>';
+    var k = o.fingers || "open", i, y;
+    if (k === "open") { for (i = 0; i < 4; i++) { y = -12 + i * 6.4; s += '<rect x="22" y="' + y + '" width="27" height="5.6" rx="2.8"/>'; } }
+    else if (k === "hook") { for (i = 0; i < 4; i++) { y = -12 + i * 6.4; s += '<rect x="22" y="' + y + '" width="16" height="5.6" rx="2.8"/><rect x="33" y="' + y + '" width="5.6" height="12" rx="2.8"/>'; } }
+    else { s += '<circle cx="34" cy="0" r="16"/><path d="M27 -6 H41 M27 0 H43 M27 6 H41" fill="none"/>'; }
+    return s + "</g></g>";
+  }
+  function arrow(d, id) { return '<path d="' + d + '" fill="none" stroke="var(--pink)" stroke-width="3" stroke-linecap="round" marker-end="url(#' + id + ')"/>'; }
+  function art(i, pre) {
+    var id = (pre || "a") + i, b = "";
+    if (i === 0) {
+      b = hand({ x: 52, y: 100, rot: -90 }) + hand({ x: 64, y: 100, rot: -90, fill: "var(--hand2)" }) + arrow("M 100 56 L 150 56", id) +
+        hand({ x: 205, y: 100, rot: -45 }) + hand({ x: 217, y: 100, rot: -45, fill: "var(--hand2)" });
+    } else if (i === 1 || i === 2) {
+      var f = i === 2 ? "var(--hand2)" : "var(--hand)";
+      b = '<text x="8" y="16">' + (i === 1 ? "telapak menghadap atas" : "telapak menghadap bawah") + "</text>" +
+        hand({ x: 26, y: 56, fill: f }) + arrow("M 100 56 L 134 56", id) + hand({ x: 160, y: 44, bend: 55, fill: f }) + arrow("M 216 46 Q 226 76 200 92", id);
+    } else if (i === 3) {
+      b = hand({ x: 50, y: 52, sc: .7 }) + arrow("M 88 52 L 108 52", id) + hand({ x: 140, y: 52, sc: .7, fingers: "hook" }) + arrow("M 178 52 L 198 52", id) + hand({ x: 230, y: 52, sc: .7, fingers: "fist" }) +
+        '<text x="30" y="100">lurus</text><text x="122" y="100">kait</text><text x="212" y="100">kepal</text>';
+    } else if (i === 4) {
+      b = hand({ x: 110, y: 56, fingers: "fist" }) + arrow("M 112 22 A 32 32 0 1 1 80 54", id) + '<text x="196" y="60">putar pelan</text>';
+    } else {
+      b = hand({ x: 90, y: 60 }) + '<path d="M 150 36 l 8 6 l -8 6 l 8 6 M 150 70 l 8 6 l -8 6 l 8 6" fill="none" stroke="var(--pink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<ellipse cx="248" cy="76" rx="32" ry="16" fill="var(--mint-soft)" stroke="var(--mint)" stroke-width="2"/>' + arrow("M 222 56 Q 248 24 278 54", id) + '<text x="232" y="104">bahu</text><text x="130" y="104">goyang</text>';
+    }
+    return '<svg class="art" viewBox="0 0 300 110" role="img" aria-label="Ilustrasi gerakan ' + esc(MOVES[i].t) + '"><defs><marker id="' + id + '" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--pink)"/></marker></defs>' + b + "</svg>";
+  }
+
+  /* ================= AUDIO + VOICE ================= */
+  var ac = null;
+  function unlockAudio() {
+    try {
+      if (!ac) { var C = window.AudioContext || window.webkitAudioContext; if (C) ac = new C(); }
+      if (ac && ac.state === "suspended") ac.resume();
+    } catch (e) {}
+  }
+  function chime() {
+    if (!settings.sound || !ac) return;
+    var p = P();
+    try {
+      p.notes.forEach(function (f, i) {
+        var o = ac.createOscillator(), g = ac.createGain();
+        o.type = p.wave; o.frequency.value = f;
+        var t = ac.currentTime + i * p.gap, peak = p.wave === "square" ? 0.09 : 0.26;
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(peak, t + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + (p.wave === "square" ? 0.28 : 0.75));
+        o.connect(g); g.connect(ac.destination);
+        o.start(t); o.stop(t + 0.85);
+      });
+    } catch (e) {}
+  }
+  function pickVoice() {
+    try {
+      var vs = speechSynthesis.getVoices();
+      if (settings.voiceURI) { var m = vs.filter(function (x) { return x.voiceURI === settings.voiceURI; })[0]; if (m) return m; }
+      return vs.filter(function (x) { return /^id/i.test(x.lang); })[0] || null;
+    } catch (e) { return null; }
+  }
+  function speak(text, interrupt) {
+    if (!settings.voice || !("speechSynthesis" in window)) return;
+    try {
+      if (interrupt) speechSynthesis.cancel();
+      var p = P(), u = new SpeechSynthesisUtterance(fill(text));
+      u.lang = "id-ID"; u.rate = p.rate; u.pitch = p.pitch;
+      var v = pickVoice(); if (v) { u.voice = v; u.lang = v.lang; }
+      speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+  function alarmBurst(idx) {
+    var a = P().alarm;
+    chime();
+    setTimeout(function () { speak(a[Math.min(idx || 0, a.length - 1)]); }, 1000);
+  }
+  var toastId = null;
+  function showToast(msg) {
+    var t = $("toast"); t.textContent = fill(msg); t.classList.add("show");
+    clearTimeout(toastId); toastId = setTimeout(function () { t.classList.remove("show"); }, 9000);
+  }
+
+  /* ================= DATA HELPERS ================= */
+  function todayKey(d) { return (d || new Date()).toLocaleDateString("en-CA"); }
+  function getDay(k) { return logs[k] || { stretches: 0, workMin: 0 }; }
+  function addDay(k, f) { var d = getDay(k); f(d); logs[k] = d; store.set("cc_log", logs); }
+  function fmt(ms) { var s = Math.max(0, Math.ceil(ms / 1000)), m = Math.floor(s / 60), r = s % 60; return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r; }
+
+  /* ================= TIMER ================= */
+  var state = "idle"; // idle | running | paused | alarm | stretching
+  var totalMs = profile.minutes * 60000, segmentMs = totalMs, remaining = totalMs, endAt = 0;
+  var tickId = null, repeatId = null, repeatCount = 0, lastTick = Date.now(), eyeAcc = 0, waterAcc = 0, doneUntil = 0;
+  var CIRC = 2 * Math.PI * 104;
+
+  function startTick() { if (!tickId) { lastTick = Date.now(); tickId = setInterval(tick, 250); } }
+  function tick() {
+    var now = Date.now(), dt = now - lastTick; lastTick = now;
+    if (state !== "running") return;
+    var rem = endAt - now;
+    if (rem <= 0) { remaining = 0; fireAlarm(); }
+    else { remaining = rem; eyeAcc += dt; waterAcc += dt; checkReminders(); }
+    render();
+  }
+  function checkReminders() {
+    if (remaining < 90000) return;
+    if (settings.eye && eyeAcc >= 20 * 60000) { eyeAcc = 0; chime(); showToast(P().eye); speak(P().eye); }
+    else if (settings.water && waterAcc >= 60 * 60000) { waterAcc = 0; chime(); showToast(P().water); speak(P().water); }
+  }
+  function startRun(ms) { unlockAudio(); segmentMs = ms; remaining = ms; endAt = Date.now() + ms; state = "running"; startTick(); render(); }
+  function bankWork() {
+    var el = 0;
+    if (state === "running") el = segmentMs - Math.max(0, endAt - Date.now());
+    else if (state === "paused") el = segmentMs - remaining;
+    var m = Math.round(el / 60000);
+    if (m > 0) addDay(todayKey(), function (d) { d.workMin += m; });
+  }
+  function mainAction() {
+    unlockAudio();
+    if (state === "idle") { startRun(totalMs); speak(P().start, true); }
+    else if (state === "running") { remaining = endAt - Date.now(); state = "paused"; }
+    else if (state === "paused") { endAt = Date.now() + remaining; state = "running"; startTick(); }
+    render();
+  }
+  function endWork() {
+    if (state === "idle") { showToast("Belum ada sesi kerja yang berjalan, {n}."); return; }
+    unlockAudio(); stopAlarm(); stopRoutine(true);
+    bankWork();
+    state = "idle"; remaining = totalMs; segmentMs = totalMs; eyeAcc = 0; waterAcc = 0;
+    var d = getDay(todayKey());
+    $("endTitle").textContent = fill("Kerja hari ini selesai, {n}!");
+    $("endText").textContent = "Hari ini kamu kerja " + d.workMin + " menit dan peregangan " + d.stretches + " kali. Jangan lupa catat keluhanmu di laporan harian.";
+    showView("viewEnd"); speak(P().end, true); doneUntil = Date.now() + 7000; setTimeout(render, 7100);
+    render();
+  }
+  function setMinutes(m) {
+    m = Math.min(180, Math.max(1, Math.round(m)));
+    profile.minutes = m; store.set("cc_profile", profile);
+    totalMs = m * 60000;
+    if (state === "idle" || state === "paused") { remaining = totalMs; segmentMs = totalMs; state = "idle"; }
+    render();
+  }
+
+  /* ---- alarm ---- */
+  function fireAlarm() {
+    stopRoutine(true);
+    state = "alarm";
+    addDay(todayKey(), function (d) { d.workMin += Math.round(segmentMs / 60000); });
+    $("ovTitle").textContent = fill(P().title); $("ovText").textContent = fill(P().text);
+    showView("viewAlarm");
+    repeatCount = 0; alarmBurst(0);
+    clearInterval(repeatId);
+    repeatId = setInterval(function () {
+      repeatCount++;
+      if (repeatCount > 4 || state !== "alarm") { clearInterval(repeatId); return; }
+      alarmBurst(repeatCount);
+    }, 20000);
+    if (settings.notify && "Notification" in window && Notification.permission === "granted") {
+      try { new Notification(fill("Waktunya peregangan, {n}!"), { body: "Waktu kerja kamu sudah cukup. Gerakkan tanganmu sebentar." }); } catch (e) {}
+    }
+    render();
+  }
+  function stopAlarm() { clearInterval(repeatId); repeatId = null; try { if ("speechSynthesis" in window) speechSynthesis.cancel(); } catch (e) {} }
+  function afterBreak() {
+    if (settings.auto) startRun(totalMs); else { state = "idle"; remaining = totalMs; segmentMs = totalMs; render(); }
+  }
+
+  /* ================= OVERLAY + ROUTINE ================= */
+  var ov = $("overlay");
+  function showView(id) {
+    ["viewAlarm", "viewRoutine", "viewDone", "viewEnd"].forEach(function (v) { $(v).hidden = (v !== id); });
+    ov.hidden = false;
+    var f = ov.querySelector("#" + id + " button"); if (f) f.focus();
+    render();
+  }
+  function closeOverlay() { ov.hidden = true; render(); }
+
+  var seq = [], step = 0, stepLeft = 0, stepTimer = null, practice = false;
+  function startRoutine(list, isPractice) {
+    unlockAudio(); stopAlarm();
+    seq = list; practice = !!isPractice; step = 0;
+    if (!practice) { bankWork(); state = "stretching"; }
+    render(); runStep();
+  }
+  function runStep() {
+    var m = MOVES[seq[step]];
+    stepLeft = m.s;
+    $("rCount").textContent = "Gerakan " + (step + 1) + " dari " + seq.length;
+    $("rTitle").textContent = m.t; $("rText").textContent = m.say;
+    $("rArt").innerHTML = art(seq[step], "ov");
+    $("rNext").textContent = step === seq.length - 1 ? "Selesai" : "Gerakan berikutnya";
+    showView("viewRoutine"); drawStep(true);
+    speak(P().step(m, step, seq.length), true);
+    clearInterval(stepTimer);
+    stepTimer = setInterval(function () { stepLeft--; drawStep(false); if (stepLeft <= 0) nextStep(); }, 1000);
+  }
+  function drawStep(reset) {
+    $("rTime").textContent = stepLeft;
+    var bar = $("rBar"), m = MOVES[seq[step]];
+    if (reset) { bar.style.transition = "none"; bar.style.width = "0%"; void bar.offsetWidth; bar.style.transition = ""; }
+    bar.style.width = ((m.s - stepLeft) / m.s * 100) + "%";
+  }
+  function nextStep() { if (step >= seq.length - 1) { finishRoutine(); return; } step++; runStep(); }
+  function stopRoutine(silent) {
+    clearInterval(stepTimer); stepTimer = null;
+    if (!silent) { try { speechSynthesis.cancel(); } catch (e) {} }
+  }
+  function finishRoutine() {
+    stopRoutine(false);
+    doneUntil = Date.now() + 7000; setTimeout(render, 7100);
+    if (practice) {
+      $("doneTitle").textContent = "Gerakan selesai!";
+      $("doneText").textContent = fill("Bagus, {n}! Ini hanya latihan, jadi belum dihitung di statistik.");
+      showView("viewDone"); speak(P().done, true);
+      return;
+    }
+    addDay(todayKey(), function (d) { d.stretches += 1; });
+    $("doneTitle").textContent = "Peregangan selesai!";
+    $("doneText").textContent = fill(settings.auto ? "Mantap, {n}! Timer kerja dimulai lagi otomatis." : "Mantap, {n}! Tekan Mulai kalau kamu siap lanjut.");
+    showView("viewDone"); speak(P().done, true);
+    afterBreak();
+  }
+  function cancelRoutine() { stopRoutine(false); closeOverlay(); if (!practice) afterBreak(); }
+
+  /* ================= RENDER ================= */
+  function mood() {
+    if (Date.now() < doneUntil) return "done";
+    return { idle: "idle", running: "work", paused: "paused", alarm: "alarm", stretching: "stretch" }[state];
+  }
+  function render() {
+    var frac = totalMs ? Math.max(0, Math.min(1, remaining / (state === "idle" ? totalMs : segmentMs))) : 0;
+    var ring = $("ring");
+    ring.style.strokeDashoffset = String(CIRC * (1 - frac));
+    ring.classList.toggle("warn", state === "running" && remaining <= 60000);
+    $("time").textContent = fmt(remaining);
+    $("status").textContent = {
+      idle: "Siap mulai. Tekan Mulai saat kamu membuka laptop.",
+      running: "Alarm berbunyi pukul " + new Date(endAt).toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }) + ".",
+      paused: "Timer dijeda.", alarm: "Waktunya peregangan!", stretching: "Sedang peregangan."
+    }[state];
+    $("btnMain").textContent = { idle: "▶ Mulai", running: "⏸ Jeda", paused: "▶ Lanjutkan", alarm: "▶ Mulai", stretching: "▶ Mulai" }[state];
+    $("btnMain").disabled = (state === "alarm" || state === "stretching");
+    var locked = state === "running" || state === "alarm" || state === "stretching";
+    document.querySelectorAll("#presets .chip").forEach(function (c) { c.disabled = locked; c.setAttribute("aria-pressed", String(Number(c.dataset.min) === profile.minutes)); });
+    $("customMin").disabled = locked;
+    $("customMin").value = [30, 45].indexOf(profile.minutes) === -1 ? profile.minutes : "";
+    document.title = (state === "running" || state === "paused" ? fmt(remaining) + " · " : state === "alarm" ? "⏰ Peregangan! · " : "") + "Carpal Care Mate";
+
+    var md = mood();
+    document.querySelectorAll(".mascot").forEach(function (m) {
+      var box = m.parentNode;
+      m.setAttribute("data-mood", box && box.dataset.fixed ? box.dataset.fixed : md);
+    });
+    $("bubble").textContent = fill(P().bubble[md] || "");
+    $("hello").textContent = "Hai, " + nm() + "! 🌸";
+    renderStats();
+  }
+  function streak() {
+    var n = 0, d = new Date();
+    if (getDay(todayKey(d)).stretches === 0) d.setDate(d.getDate() - 1);
+    while (getDay(todayKey(d)).stretches > 0) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+  function renderStats() {
+    var t = getDay(todayKey());
+    $("stStretch").textContent = t.stretches; $("stWork").textContent = t.workMin; $("stStreak").textContent = streak();
+    var days = [], max = 1, i, d;
+    for (i = 6; i >= 0; i--) { d = new Date(); d.setDate(d.getDate() - i); days.push(d); }
+    days.forEach(function (x) { max = Math.max(max, getDay(todayKey(x)).stretches); });
+    $("bars").innerHTML = days.map(function (x, idx) {
+      var v = getDay(todayKey(x)).stretches, h = v ? Math.max(10, v / max * 84) : 0;
+      return '<div class="bar' + (idx === 6 ? " today" : "") + (v ? "" : " empty") + '" title="' + v + ' peregangan"><span>' + v + '</span><i style="height:' + (h || 5) + 'px"></i><span>' + x.toLocaleDateString("id-ID", { weekday: "short" }) + "</span></div>";
+    }).join("");
+  }
+
+  /* ================= GUIDE ================= */
+  $("moveList").innerHTML = MOVES.map(function (m, i) {
+    return '<article class="move"><div class="art-box">' + art(i, "g") + '</div><h3>' + esc(m.t) + '<span class="meta">' + m.s + ' dtk</span></h3><p>' + esc(m.benefit) +
+      '</p><details><summary>Lihat langkah-langkahnya</summary><ol>' + m.steps.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ol></details><button class="btn small" data-try="' + i + '">Coba gerakan ini</button></article>';
+  }).join("");
+  $("moveList").addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-try]"); if (!b) return;
+    if (state === "alarm" || state === "stretching") return;
+    startRoutine([Number(b.dataset.try)], true);
+  });
+  $("btnRoutine").addEventListener("click", function () { if (state === "alarm" || state === "stretching") return; startRoutine(MOVES.map(function (m, i) { return i; }), false); });
+
+  /* ================= REPORT ================= */
+  var FACES = [["😄", "Ringan"], ["🙂", "Agak terasa"], ["😐", "Sedang"], ["😣", "Berat"], ["😭", "Sangat berat"]];
+  $("faces").innerHTML = FACES.map(function (f, i) {
+    return '<label><input type="radio" name="pain" value="' + (i + 1) + '"' + (i === 0 ? " checked" : "") + '><span class="f">' + f[0] + "<small>" + (i + 1) + " · " + f[1] + "</small></span></label>";
+  }).join("");
+  $("rDate").value = todayKey();
+  function painColor(p) { return p >= 4 ? "#B0305F" : p === 3 ? "#A8690F" : "#2B7F63"; }
+  function renderReports() {
+    var list = reports.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : b.id - a.id; });
+    $("symList").innerHTML = list.length ? list.map(function (e) {
+      var dt = new Date(e.date + "T00:00:00").toLocaleDateString("id-ID", { weekday: "long", day: "numeric", month: "short", year: "numeric" });
+      return '<li><div class="pain-badge" style="background:' + painColor(e.pain) + '">' + e.pain + '</div><div class="body"><div class="meta">' + dt + " · tangan " + esc(e.side.toLowerCase()) + " · mengetik " + e.hours + " jam</div>" +
+        (e.signs.length ? esc(e.signs.join(", ")) : "Tidak ada keluhan tambahan") + (e.note ? '<div class="meta">' + esc(e.note) + "</div>" : "") +
+        '</div><button class="del" data-id="' + e.id + '" aria-label="Hapus laporan">×</button></li>';
+    }).join("") : '<li style="color:var(--muted)">Belum ada laporan. Isi formulir di atas untuk mulai mencatat keluhanmu.</li>';
+
+    var asc = list.slice(0, 10).reverse();
+    if (asc.length >= 2) {
+      var w = 320, h = 80, pts = asc.map(function (e, i) { return [(i / (asc.length - 1) * (w - 24) + 12), (h - 12 - (e.pain - 1) / 4 * (h - 24))]; });
+      $("trend").innerHTML = '<div class="lbl" style="font-size:15px">Tren nyeri (10 laporan terakhir)</div><svg viewBox="0 0 ' + w + " " + h + '" width="100%" style="max-width:420px" role="img" aria-label="Grafik tren nyeri"><polyline points="' + pts.map(function (p) { return p.join(","); }).join(" ") + '" fill="none" stroke="var(--lav)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>' + pts.map(function (p) { return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="4.5" fill="var(--pink)"/>'; }).join("") + "</svg>";
+    } else { $("trend").innerHTML = ""; }
+
+    var warn = "", last3 = list.slice(0, 3);
+    var avg = last3.length ? last3.reduce(function (a, e) { return a + e.pain; }, 0) / last3.length : 0;
+    var wk = new Date(); wk.setDate(wk.getDate() - 7); var wkKey = todayKey(wk);
+    var heavy = list.some(function (e) { return e.date >= wkKey && (e.signs.length >= 3 || e.signs.indexOf("Jari terasa lemah") > -1 || e.signs.indexOf("Sulit menggenggam") > -1 || e.signs.indexOf("Nyeri/kesemutan malam hari") > -1); });
+    if (last3.length >= 2 && avg >= 4) warn = "Nyerimu cenderung tinggi pada beberapa laporan terakhir.";
+    else if (heavy) warn = "Ada keluhan yang cukup banyak, mengganggu tidur, atau melemahkan genggaman dalam seminggu terakhir.";
+    $("symNotice").innerHTML = warn ? '<div class="notice"><b>Sebaiknya diperiksakan, ' + esc(nm()) + ".</b> " + warn + " Pertimbangkan konsultasi ke dokter atau layanan kesehatan kerja.</div>" : "";
+  }
+  $("btnFill").addEventListener("click", function () {
+    var m = getDay(todayKey()).workMin;
+    if (!m) { showToast("Belum ada menit kerja tercatat hari ini, {n}. Jalankan timer dulu ya."); return; }
+    $("rHours").value = Math.round(m / 30) / 2;
+  });
+  $("btnSave").addEventListener("click", function () {
+    var signs = Array.prototype.slice.call(document.querySelectorAll("#signs input:checked")).map(function (c) { return c.value; });
+    var date = $("rDate").value || todayKey();
+    var hrs = Math.max(0, Math.min(16, Number($("rHours").value) || 0));
+    reports.push({ id: Date.now(), date: date, pain: Number(document.querySelector('input[name="pain"]:checked').value), hours: hrs, side: document.querySelector('input[name="side"]:checked').value, signs: signs, note: $("note").value.trim() });
+    store.set("cc_reports", reports);
+    $("note").value = ""; document.querySelectorAll("#signs input").forEach(function (c) { c.checked = false; });
+    renderReports(); showToast("Laporan tersimpan. Terima kasih sudah mencatat, {n}!");
+  });
+  $("symList").addEventListener("click", function (e) {
+    var id = e.target && e.target.dataset && e.target.dataset.id; if (!id) return;
+    reports = reports.filter(function (x) { return String(x.id) !== id; });
+    store.set("cc_reports", reports); renderReports();
+  });
+  $("btnSummary").addEventListener("click", function () {
+    var box = $("summary");
+    if (!reports.length) { box.value = "Belum ada laporan keluhan."; box.hidden = false; return; }
+    var list = reports.slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+    var avg = (list.reduce(function (a, e) { return a + e.pain; }, 0) / list.length).toFixed(1);
+    var avgH = (list.reduce(function (a, e) { return a + e.hours; }, 0) / list.length).toFixed(1);
+    var cnt = {}; list.forEach(function (e) { e.signs.forEach(function (s) { cnt[s] = (cnt[s] || 0) + 1; }); });
+    var fd = function (k) { return new Date(k + "T00:00:00").toLocaleDateString("id-ID"); };
+    var lines = [
+      "RINGKASAN LAPORAN KASUS HARIAN (pemantauan CTS)",
+      "Nama: " + nm(),
+      "Periode: " + fd(list[0].date) + " s.d. " + fd(list[list.length - 1].date),
+      "Jumlah laporan: " + list.length,
+      "Rata-rata nyeri: " + avg + "/5; tertinggi: " + Math.max.apply(null, list.map(function (e) { return e.pain; })) + "/5",
+      "Rata-rata durasi mengetik: " + avgH + " jam/hari",
+      "Keluhan tercatat: " + (Object.keys(cnt).length ? Object.keys(cnt).map(function (k) { return k + " (" + cnt[k] + "x)"; }).join(", ") : "-"),
+      "Total peregangan tercatat: " + Object.keys(logs).reduce(function (a, k) { return a + logs[k].stretches; }, 0),
+      "", "Rincian:"
+    ].concat(list.map(function (e) { return "- " + fd(e.date) + " | nyeri " + e.pain + "/5 | mengetik " + e.hours + " jam | tangan " + e.side.toLowerCase() + " | " + (e.signs.join(", ") || "tanpa keluhan tambahan") + (e.note ? " | " + e.note : ""); }));
+    box.value = lines.join("\n"); box.hidden = false; box.select();
+    try { if (navigator.clipboard) navigator.clipboard.writeText(box.value); } catch (e) {}
+  });
+
+  /* ================= TABS ================= */
+  var tabs = document.querySelectorAll(".tab");
+  function openTab(t) { tabs.forEach(function (x) { var on = x === t; x.setAttribute("aria-selected", String(on)); $(x.getAttribute("aria-controls")).hidden = !on; }); }
+  tabs.forEach(function (t) { t.addEventListener("click", function () { openTab(t); }); });
+
+  /* ================= WELCOME / SETUP ================= */
+  var selPersona = profile.persona, selMin = profile.minutes;
+  function renderWelcomePersonas() {
+    $("personaList").innerHTML = Object.keys(PERSONAS).map(function (k) {
+      var p = PERSONAS[k];
+      return '<button class="persona" data-k="' + k + '" aria-pressed="' + (selPersona === k) + '"><span class="ic">' + p.icon + "</span><b>" + p.label + "</b><span>" + p.blurb + "</span><em>\u201C" + esc(p.sample.replace(/\{n\}/g, $("inName").value.trim() || "kamu")) + "\u201D</em></button>";
+    }).join("");
+    document.querySelectorAll("#wChips .chip").forEach(function (c) { c.setAttribute("aria-pressed", String(Number(c.dataset.min) === selMin)); });
+  }
+  function openWelcome() {
+    $("inName").value = profile.name; selPersona = profile.persona; selMin = profile.minutes;
+    renderWelcomePersonas();
+    $("btnGo").disabled = !$("inName").value.trim();
+    $("btnGo").textContent = profile.name ? "Simpan perubahan" : "Mulai bersama Moci";
+    $("btnCancelSet").hidden = !profile.name;
+    $("welcome").hidden = false; $("app").hidden = true;
+    document.querySelectorAll("#welcome .mascot").forEach(function (m) { m.setAttribute("data-mood", "work"); });
+    window.scrollTo(0, 0);
+  }
+  $("inName").addEventListener("input", function () { $("btnGo").disabled = !$("inName").value.trim(); renderWelcomePersonas(); });
+  $("personaList").addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".persona"); if (!b) return;
+    selPersona = b.dataset.k; renderWelcomePersonas();
+    var keep = profile.persona; profile.persona = selPersona;
+    var nameTmp = profile.name; profile.name = $("inName").value.trim() || "kamu";
+    unlockAudio(); chime(); setTimeout(function () { speak(P().sample, true); }, 900);
+    profile.persona = keep; profile.name = nameTmp;
+  });
+  $("wChips").addEventListener("click", function (e) { var b = e.target.closest && e.target.closest(".chip"); if (!b) return; selMin = Number(b.dataset.min); renderWelcomePersonas(); });
+  $("btnGo").addEventListener("click", function () {
+    var first = !profile.name;
+    profile.name = $("inName").value.trim(); profile.persona = selPersona;
+    store.set("cc_profile", profile);
+    unlockAudio();
+    $("welcome").hidden = true; $("app").hidden = false;
+    setMinutes(selMin); render();
+    chime(); setTimeout(function () { speak(first ? P().hello : P().sample, true); }, 900);
+    window.scrollTo(0, 0);
+  });
+  $("btnCancelSet").addEventListener("click", function () { $("welcome").hidden = true; $("app").hidden = false; render(); });
+  $("btnSettings").addEventListener("click", openWelcome);
+
+  /* ================= WIRING ================= */
+  $("btnMain").addEventListener("click", mainAction);
+  $("btnEnd").addEventListener("click", endWork);
+  document.querySelectorAll("#presets .chip").forEach(function (c) { c.addEventListener("click", function () { setMinutes(Number(c.dataset.min)); }); });
+  $("customMin").addEventListener("change", function (e) { var v = Number(e.target.value); if (v >= 1) setMinutes(v); });
+
+  $("aStart").addEventListener("click", function () { startRoutine(MOVES.map(function (m, i) { return i; }), false); });
+  $("aSnooze").addEventListener("click", function () { stopAlarm(); closeOverlay(); startRun(5 * 60000); speak(P().snooze, true); });
+  $("aSkip").addEventListener("click", function () { stopAlarm(); closeOverlay(); afterBreak(); speak(P().skip, true); });
+  $("rNext").addEventListener("click", nextStep);
+  $("rStop").addEventListener("click", cancelRoutine);
+  $("dClose").addEventListener("click", closeOverlay);
+  $("eClose").addEventListener("click", closeOverlay);
+  $("eReport").addEventListener("click", function () { closeOverlay(); openTab($("t-report")); $("p-report").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !ov.hidden && state !== "alarm" && state !== "stretching" && $("viewRoutine").hidden) closeOverlay(); });
+
+  function bindSwitch(id, key, cb) {
+    var el = $(id); el.checked = !!settings[key];
+    el.addEventListener("change", function () { settings[key] = el.checked; store.set("cc_settings", settings); if (cb) cb(el); });
+  }
+  bindSwitch("swVoice", "voice"); bindSwitch("swSound", "sound"); bindSwitch("swAuto", "auto"); bindSwitch("swEye", "eye"); bindSwitch("swWater", "water");
+  bindSwitch("swNotify", "notify", function (el) {
+    var hint = $("notifyHint"); hint.textContent = "";
+    if (!el.checked) return;
+    if (!("Notification" in window)) { hint.textContent = "Browser ini belum mendukung notifikasi."; el.checked = false; settings.notify = false; return; }
+    Notification.requestPermission().then(function (p) {
+      if (p !== "granted") { hint.textContent = "Izin notifikasi ditolak. Aktifkan lewat pengaturan browser."; el.checked = false; settings.notify = false; store.set("cc_settings", settings); }
+    });
+  });
+  $("btnTest").addEventListener("click", function () { unlockAudio(); alarmBurst(0); });
+
+  function fillVoices() {
+    if (!("speechSynthesis" in window)) { $("voiceHint").textContent = "Browser ini belum mendukung suara. Alarm tetap berbunyi."; return; }
+    var vs = []; try { vs = speechSynthesis.getVoices(); } catch (e) {}
+    var id = vs.filter(function (v) { return /^id/i.test(v.lang); }), sel = $("voiceSel");
+    sel.innerHTML = '<option value="">Otomatis</option>' + id.map(function (v) { return '<option value="' + esc(v.voiceURI) + '">' + esc(v.name) + " (" + esc(v.lang) + ")</option>"; }).join("");
+    sel.value = settings.voiceURI || "";
+    $("voiceHint").textContent = id.length ? "Nada dan kecepatan bicara diatur otomatis oleh mode sahabat yang kamu pilih." : "Perangkatmu belum punya suara bahasa Indonesia, jadi suara bawaan dipakai dan aksennya bisa berbeda. Di Android biasanya tinggal unduh suara Indonesia di pengaturan.";
+  }
+  $("voiceSel").addEventListener("change", function (e) { settings.voiceURI = e.target.value; store.set("cc_settings", settings); unlockAudio(); speak(P().sample, true); });
+  if ("speechSynthesis" in window) { try { speechSynthesis.addEventListener("voiceschanged", fillVoices); } catch (e) {} }
+
+  /* ================= INIT ================= */
+  document.querySelectorAll("[data-mascot]").forEach(function (b) { b.innerHTML = mascotSVG(); });
+  fillVoices(); renderReports(); render();
+  if (profile.name) { $("welcome").hidden = true; $("app").hidden = false; } else { openWelcome(); }
+})();
+</script>
+</body>
+</html>
